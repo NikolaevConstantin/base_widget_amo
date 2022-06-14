@@ -1,0 +1,42 @@
+{
+    "widget": {
+        "name": "widget.name",
+        "description": "widget.description",
+        "short_description": "widget.short_description",
+        "version": "3.0.0",
+        "interface_version": 2,
+        "init_once": false,
+        "locale": [
+            "ru"
+        ],
+        "installation": true,
+        "support":{
+            "link": "https://ingru.ru/",
+            "email": "welcome@ingru.ru"
+        }
+    },
+    "locations": [
+        "settings",
+        "everywhere",
+        "advanced_settings"
+    ],
+    "tour": {
+        "is_tour": true,
+        "tour_images": {
+            "ru": [
+                "/images/tour1.png"
+            ]
+        },
+        "tour_description": "widget.tour_description"
+    },
+    "settings": {
+        "system_field": {
+            "name": "settings.system_field",
+            "type": "text",
+            "required": false
+        }
+    },
+    "advanced": {
+        "title": "advanced.title"
+    }
+}

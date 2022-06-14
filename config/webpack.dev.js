@@ -1,0 +1,45 @@
+const { merge } = require('webpack-merge')
+
+const common = require('./webpack.common')
+
+module.exports = merge(common, {
+    // Set the mode to development or production
+    mode: 'development',
+
+    // Control how source maps are generated
+    devtool: 'inline-source-map',
+
+    // Spin up a server for quick development
+    devServer: {
+        historyApiFallback: true,
+        open: true,
+        compress: false,
+        hot: true,
+        port: 8081,
+    },
+
+    module: {
+        rules: [
+            // Styles: Inject CSS into the head with source maps
+            // localIdentName: '[local]__[hash:base64:5]___[name]'
+            {
+                test: /\.(sass|scss|css)$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: { sourceMap: true, importLoaders: 1, modules: {auto:true, localIdentName: '[local]__[hash:base64:5]'}},
+                    },
+                    { loader: 'postcss-loader', options: { sourceMap: true } },
+                    { loader: 'sass-loader', options: { sourceMap: true } },
+                ],
+            },
+            // SVG
+            {
+                test: /\.svg$/i,
+                issuer: /\.[jt]sx?$/,
+                use: ['@svgr/webpack'],
+            },
+        ],
+    },
+})

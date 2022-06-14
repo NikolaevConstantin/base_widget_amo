@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@UI/*": ["./src/app/componentsUI/*"],
+      "@Components/*": ["./src/app/components/*"],
+      "@Icons/*": ["./src/app/images/icons/*"],
+      "@Store/*": ["./src/app/store/*"],
+      "@Api/*": ["./src/app/api/*"]
+    },
+    "allowJs": true
+  }
+}

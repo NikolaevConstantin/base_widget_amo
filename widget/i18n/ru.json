@@ -1,0 +1,17 @@
+{
+    "widget": {
+        "name":"ReactApp",
+        "short_description":"short_description ReactApp",
+        "tour_description": "tour_description ReactApp",
+        "description": "description ReactApp"
+    },
+    "settings": {
+        "system_field":"Системное поле",
+        "account_id":"Публичный Id"
+    },
+    "advanced": {
+        "title": "advanced ReactApp",
+        "integrator_name": "Ингруппа",
+        "info_button": "Инструкция по настройке виджета"
+    }
+}

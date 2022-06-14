@@ -1,0 +1,38 @@
+#work_area{
+  background-color: #ffffff;
+  padding: 0px;
+}
+.app-advanced-settings{
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  >.header{
+    height:100px;
+    background-color: darkred;
+  }
+  >.bodyСontent{
+    background-color: green;
+    height: calc(100% - 64px);
+    position: relative;
+  }
+  >.buttons{
+    display: flex;
+    margin: 100px auto;
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+    >.btn{
+      border-radius: 3px;
+      display: flex;
+      background-color: #2F6EFFFF;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 10px 12px;
+    }
+  }
+
+}
+
+
